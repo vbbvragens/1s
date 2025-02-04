@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thema 1 - Vragens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+             <!-- Favicon Ekleme -->
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/internet-security-vol-1-filled/32/left-indent_indent_align_alignment-512.png"/>
+</head>
+<body>
+
+</head>
+<body>
+
+<button class="toggle-button" id="toggleButton">Dark Mode</button>
+
+<h1>Thema 1 - Vragens</h1>
+
+<div class="section" id="vragen">
+    <!-- Vragen hier -->
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <div class="btn">
+        <a href="https://vbbvragens.github.io/startpagina/">Terug naar Startpagina</a>
+    </div>
+</div>
+
+<button class="toggle-sidebar" id="toggleSidebar">Vragenlijst</button>
+<div class="sidebar" id="sidebar">
+    <h3 style="text-align: center;">Vragenlijst</h3>
+    <div class="number-container" id="numberContainer"></div>
+    <button id="showAllQuestions" class="show-all-button">Toon Alle Vragen</button>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <h3 style="text-align: center;">Vragenlijst</h3>
+    <div class="number-container" id="numberContainer"></div>
+    <button id="showAllQuestions" class="show-all-button">Toon Alle Vragen</button>
+</div>
+
+    <div class="section" id="vragen">
+    <div class="question">
+        <h3>1. Wanneer werd het eerste particuliere beveiligingsbedrijf in Nederland opgericht?</h3>
+        <button class="button" onclick="checkAnswer(1, 'A', this)">A) 1900</button>
+        <button class="button" onclick="checkAnswer(1, 'B', this)">B) 1902</button>
+        <button class="button" onclick="checkAnswer(1, 'C', this)">C) 1920</button>
+        <button class="button" onclick="checkAnswer(1, 'D', this)">D) 1950</button>
+        <div id="result1" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(1)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>2. Wat is de belangrijkste taak van een beveiliger?</h3>
+        <button class="button" onclick="checkAnswer(2, 'A', this)">A) Handhaving van de wet</button>
+        <button class="button" onclick="checkAnswer(2, 'B', this)">B) Preventie van ongewenste gebeurtenissen</button>
+        <button class="button" onclick="checkAnswer(2, 'C', this)">C) Klantgericht handelen</button>
+        <button class="button" onclick="checkAnswer(2, 'D', this)">D) Rapporteren van incidenten</button>
+        <div id="result2" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(0)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(2)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>3. Welke ruimtes vallen onder de private ruimtes?</h3>
+        <button class="button" onclick="checkAnswer(3, 'A', this)">A) Straten</button>
+        <button class="button" onclick="checkAnswer(3, 'B', this)">B) Parken</button>
+        <button class="button" onclick="checkAnswer(3, 'C', this)">C) Pleinen</button>
+        <button class="button" onclick="checkAnswer(3, 'D', this)">D) Bedrijfsgebouwen</button>
+        <div id="result3" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(1)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(3)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>4. Wie is verantwoordelijk voor de veiligheid in publieke ruimtes?</h3>
+        <button class="button" onclick="checkAnswer(4, 'A', this)">A) Beveiligers</button>
+        <button class="button" onclick="checkAnswer(4, 'B', this)">B) De overheid</button>
+        <button class="button" onclick="checkAnswer(4, 'C', this)">C) Particulieren</button>
+        <button class="button" onclick="checkAnswer(4, 'D', this)">D) Vrijwilligers</button>
+        <div id="result4" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(2)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(4)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>5. Wat houdt manbeveiliging in?</h3>
+        <button class="button" onclick="checkAnswer(5, 'A', this)">A) Beveiliging uitgevoerd door mensen</button>
+        <button class="button" onclick="checkAnswer(5, 'B', this)">B) Beveiliging door technische middelen</button>
+        <button class="button" onclick="checkAnswer(5, 'C', this)">C) Beveiliging tijdens evenementen</button>
+        <button class="button" onclick="checkAnswer(5, 'D', this)">D) Beveiliging door de overheid</button>
+        <div id="result5" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(3)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(5)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>6. Welke van de volgende bedrijven behoort tot de beveiligingsbranche?</h3>
+        <button class="button" onclick="checkAnswer(6, 'A', this)">A) Transportbedrijven</button>
+        <button class="button" onclick="checkAnswer(6, 'B', this)">B) Particuliere alarmcentrales</button>
+        <button class="button" onclick="checkAnswer(6, 'C', this)">C) Restaurantketens</button>
+        <button class="button" onclick="checkAnswer(6, 'D', this)">D) Verzekeringsmaatschappijen</button>
+        <div id="result6" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(4)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(6)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>7. Welke taak van een beveiliger omvat het toezicht houden op een situatie?</h3>
+        <button class="button" onclick="checkAnswer(7, 'A', this)">A) Preventie</button>
+        <button class="button" onclick="checkAnswer(7, 'B', this)">B) Monitoring</button>
+        <button class="button" onclick="checkAnswer(7, 'C', this)">C) Alarmeren</button>
+        <button class="button" onclick="checkAnswer(7, 'D', this)">D) Repressie</button>
+        <div id="result7" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(5)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(7)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>8. Wat is een voorbeeld van repressief handelen?</h3>
+        <button class="button" onclick="checkAnswer(8, 'A', this)">A) Voorkomen van een inbraak</button>
+        <button class="button" onclick="checkAnswer(8, 'B', this)">B) Toegangscontrole uitvoeren</button>
+        <button class="button" onclick="checkAnswer(8, 'C', this)">C) Rapporteren van incidenten</button>
+        <button class="button" onclick="checkAnswer(8, 'D', this)">D) Aanspreken van een verdachte</button>
+        <div id="result8" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(6)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(8)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>9. Wat houdt het alarmeren in?</h3>
+        <button class="button" onclick="checkAnswer(9, 'A', this)">A) Personen toegang geven</button>
+        <button class="button" onclick="checkAnswer(9, 'B', this)">B) Toezicht houden</button>
+        <button class="button" onclick="checkAnswer(9, 'C', this)">C) Hulpdiensten waarschuwen</button>
+        <button class="button" onclick="checkAnswer(9, 'D', this)">D) Klanten bedienen</button>
+        <div id="result9" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(7)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(9)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>10. Wat betekent het om integer te zijn als beveiliger?</h3>
+        <button class="button" onclick="checkAnswer(10, 'A', this)">A) Flexibel zijn in je taken</button>
+        <button class="button" onclick="checkAnswer(10, 'B', this)">B) Eerlijk en niet omkoopbaar zijn</button>
+        <button class="button" onclick="checkAnswer(10, 'C', this)">C) Goed communiceren</button>
+        <button class="button" onclick="checkAnswer(10, 'D', this)">D) Alert zijn op afwijkend gedrag</button>
+        <div id="result10" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(8)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(10)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>11. Welke van de volgende vaardigheden is essentieel voor een beveiliger?</h3>
+        <button class="button" onclick="checkAnswer(11, 'A', this)">A) Technische kennis</button>
+        <button class="button" onclick="checkAnswer(11, 'B', this)">B) Creatief denken</button>
+        <button class="button" onclick="checkAnswer(11, 'C', this)">C) Goed communiceren</button>
+        <button class="button" onclick="checkAnswer(11, 'D', this)">D) Financieel inzicht</button>
+        <div id="result11" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(9)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(11)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>12. Wat zijn instructies in de beveiligingsbranche?</h3>
+        <button class="button" onclick="checkAnswer(12, 'A', this)">A) Adviezen van collega's</button>
+        <button class="button" onclick="checkAnswer(12, 'B', this)">B) Afspraken en procedures</button>
+        <button class="button" onclick="checkAnswer(12, 'C', this)">C) Verslagen van incidenten</button>
+        <button class="button" onclick="checkAnswer(12, 'D', this)">D) Klanttevredenheidsonderzoeken</button>
+        <div id="result12" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(10)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(12)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>13. Welke soort instructies beschrijft hoofdlijnen van taken?</h3>
+        <button class="button" onclick="checkAnswer(13, 'A', this)">A) Specifieke instructies</button>
+        <button class="button" onclick="checkAnswer(13, 'B', this)">B) Algemene instructies</button>
+        <button class="button" onclick="checkAnswer(13, 'C', this)">C) Tijdelijke instructies</button>
+        <button class="button" onclick="checkAnswer(13, 'D', this)">D) Bijzondere instructies</button>
+        <div id="result13" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(11)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(13)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>14. Wat zijn tijdelijke instructies?</h3>
+        <button class="button" onclick="checkAnswer(14, 'A', this)">A) Instructies voor dagelijkse taken</button>
+        <button class="button" onclick="checkAnswer(14, 'B', this)">B) Instructies speciaal voor evenementen</button>
+        <button class="button" onclick="checkAnswer(14, 'C', this)">C) Instructies die bepaalde tijdelijke situaties dekken</button>
+        <button class="button" onclick="checkAnswer(14, 'D', this)">D) Instructies die nooit veranderen</button>
+        <div id="result14" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(12)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(14)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>15. Wat betekent het verlenen van diensten?</h3>
+        <button class="button" onclick="checkAnswer(15, 'A', this)">A) Klantvriendelijke handelingen uitvoeren</button>
+        <button class="button" onclick="checkAnswer(15, 'B', this)">B) Het verkopen van producten</button>
+        <button class="button" onclick="checkAnswer(15, 'C', this)">C) Taken negeren</button>
+        <button class="button" onclick="checkAnswer(15, 'D', this)">D) Beveiligingstaken verminderen</button>
+        <div id="result15" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(13)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(15)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>16. Wat zijn directe diensten?</h3>
+        <button class="button" onclick="checkAnswer(16, 'A', this)">A) Diensten die niets met beveiliging te maken hebben</button>
+        <button class="button" onclick="checkAnswer(16, 'B', this)">B) Diensten die voortkomen uit een beveiligingstaak</button>
+        <button class="button" onclick="checkAnswer(16, 'C', this)">C) Diensten verlenen aan externen</button>
+        <button class="button" onclick="checkAnswer(16, 'D', this)">D) Diensten die alleen in noodgevallen worden verleend</button>
+        <div id="result16" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(14)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(16)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>17. Wanneer gaat beveiligingstaken vóór dienstverlening?</h3>
+        <button class="button" onclick="checkAnswer(17, 'A', this)">A) Altijd</button>
+        <button class="button" onclick="checkAnswer(17, 'B', this)">B) Soms</button>
+        <button class="button" onclick="checkAnswer(17, 'C', this)">C) Nooit</button>
+        <button class="button" onclick="checkAnswer(17, 'D', this)">D) Alleen bij grote incidenten</button>
+        <div id="result17" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(15)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(17)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>18. Welke situatie vereist dat je een dienst verlenende taak vóór een beveiligingstaak uitvoert?</h3>
+        <button class="button" onclick="checkAnswer(18, 'A', this)">A) Een brandmelding</button>
+        <button class="button" onclick="checkAnswer(18, 'B', this)">B) De diefstal van een product</button>
+        <button class="button" onclick="checkAnswer(18, 'C', this)">C) Hulp aan iemand met een hartstilstand</button>
+        <button class="button" onclick="checkAnswer(18, 'D', this)">D) Het controleren van identiteitsbewijzen</button>
+        <div id="result18" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(16)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(18)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>19. Wat is klantgericht handelen?</h3>
+        <button class="button" onclick="checkAnswer(19, 'A', this)">A) De klant negeren</button>
+        <button class="button" onclick="checkAnswer(19, 'B', this)">B) De klant centraal stellen</button>
+        <button class="button" onclick="checkAnswer(19, 'C', this)">C) Alleen je taken uitvoeren</button>
+        <button class="button" onclick="checkAnswer(19, 'D', this)">D) Zaken uit handen geven aan anderen</button>
+        <div id="result19" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(17)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(19)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>20. Wat is belangrijk bij goed communiceren als beveiliger?</h3>
+        <button class="button" onclick="checkAnswer(20, 'A', this)">A) Alleen verbaal communiceren</button>
+        <button class="button" onclick="checkAnswer(20, 'B', this)">B) Non-verbale signalen negeren</button>
+        <button class="button" onclick="checkAnswer(20, 'C', this)">C) Duidelijke en begrijpelijke boodschappen overbrengen</button>
+        <button class="button" onclick="checkAnswer(20, 'D', this)">D) Eenzijdig informatie geven</button>
+        <div id="result20" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(18)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(20)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>21. Wat moet je doen als je niet zeker weet hoe je moet handelen?</h3>
+        <button class="button" onclick="checkAnswer(21, 'A', this)">A) Gewoon handelen</button>
+        <button class="button" onclick="checkAnswer(21, 'B', this)">B) Overleggen met collega's of leidinggevende</button>
+        <button class="button" onclick="checkAnswer(21, 'C', this)">C) Afwachten</button>
+        <button class="button" onclick="checkAnswer(21, 'D', this)">D) De situatie negeren</button>
+        <div id="result21" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(19)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(21)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>22. Wat gebeurt er als je direct moet optreden zonder instructies?</h3>
+        <button class="button" onclick="checkAnswer(22, 'A', this)">A) Je wacht op verdere instructies</button>
+        <button class="button" onclick="checkAnswer(22, 'B', this)">B) Gebruik je gezond verstand en ervaring</button>
+        <button class="button" onclick="checkAnswer(22, 'C', this)">C) Je vraagt om hulp</button>
+        <button class="button" onclick="checkAnswer(22, 'D', this)">D) Je vraagt om een pauze</button>
+        <div id="result22" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(20)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(22)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>23. Wat zijn publieke ruimtes?</h3>
+        <button class="button" onclick="checkAnswer(23, 'A', this)">A) Ruimtes die voor iedereen toegankelijk zijn</button>
+        <button class="button" onclick="checkAnswer(23, 'B', this)">B) Ruimtes waar alleen de overheid aanwezig is</button>
+        <button class="button" onclick="checkAnswer(23, 'C', this)">C) Ruimtes die door beveiligers moeten worden gecontroleerd</button>
+        <button class="button" onclick="checkAnswer(23, 'D', this)">D) Ruimtes waarin geen bezoekers zijn</button>
+        <div id="result23" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(21)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(23)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>24. Welke van de volgende is GEEN onderdeel van manbeveiliging?</h3>
+        <button class="button" onclick="checkAnswer(24, 'A', this)">A) Preventie</button>
+        <button class="button" onclick="checkAnswer(24, 'B', this)">B) Alarmeren</button>
+        <button class="button" onclick="checkAnswer(24, 'C', this)">C) Rapporteren</button>
+        <button class="button" onclick="checkAnswer(24, 'D', this)">D) Technische beveiliging</button>
+        <div id="result24" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(22)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(24)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>25. Wat is een belangrijk aspect van beroepsethiek?</h3>
+        <button class="button" onclick="checkAnswer(25, 'A', this)">A) Naleven van persoonlijke voorkeuren</button>
+        <button class="button" onclick="checkAnswer(25, 'B', this)">B) Nadenken over wat goed en fout is</button>
+        <button class="button" onclick="checkAnswer(25, 'C', this)">C) Voorkeur geven aan collega's</button>
+        <button class="button" onclick="checkAnswer(25, 'D', this)">D) Financiële voordelen nastreven</button>
+        <div id="result25" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(23)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(25)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>26. Wat zijn waarden in de context van beveiliging?</h3>
+        <button class="button" onclick="checkAnswer(26, 'A', this)">A) Financiële doelen</button>
+        <button class="button" onclick="checkAnswer(26, 'B', this)">B) Fysieke eigenschappen</button>
+        <button class="button" onclick="checkAnswer(26, 'C', this)">C) Persoonlijke voorkeuren</button>
+        <button class="button" onclick="checkAnswer(26, 'D', this)">D) Idealen en ideeën over wat belangrijk is</button>
+        <div id="result26" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(24)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(26)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>27. Wat valt onder technische beveiliging?</h3>
+        <button class="button" onclick="checkAnswer(27, 'A', this)">A) Het aanstellen van beveiligers</button>
+        <button class="button" onclick="checkAnswer(27, 'B', this)">B) Het uitvoeren van surveillances</button>
+        <button class="button" onclick="checkAnswer(27, 'C', this)">C) Het installeren van camera's en alarmsystemen</button>
+        <button class="button" onclick="checkAnswer(27, 'D', this)">D) Het geven van trainingen aan personeel</button>
+        <div id="result27" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(25)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(27)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>28. Wat is een van de belangrijkste doelen van instructies?</h3>
+        <button class="button" onclick="checkAnswer(28, 'A', this)">A) Zorg dragen voor eigenbelang</button>
+        <button class="button" onclick="checkAnswer(28, 'B', this)">B) Zekerheid van inkomsten</button>
+        <button class="button" onclick="checkAnswer(28, 'C', this)">C) Voorkomen van verwarring en onduidelijkheid</button>
+        <button class="button" onclick="checkAnswer(28, 'D', this)">D) Verbetering van persoonlijke vaardigheden</button>
+        <div id="result28" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(26)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(28)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>29. Wat zijn particuliere beveiligingsbedrijven?</h3>
+        <button class="button" onclick="checkAnswer(29, 'A', this)">A) Bedrijven die beveiliging bieden in criminele situaties</button>
+        <button class="button" onclick="checkAnswer(29, 'B', this)">B) Bedrijven die voor klanten beveiligingswerkzaamheden uitvoeren</button>
+        <button class="button" onclick="checkAnswer(29, 'C', this)">C) Overheidsinstanties die verantwoordelijk zijn voor de veiligheid</button>
+        <button class="button" onclick="checkAnswer(29, 'D', this)">D) Vrijwilligersorganisaties</button>
+        <div id="result29" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(27)">Vorige</button>
+            <button class="nav-button" onclick="navigateToQuestion(29)">Volgende</button>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>30. Wat is de rol van de beveiliger in een evenement?</h3>
+        <button class="button" onclick="checkAnswer(30, 'A', this)">A) Het organiseren van het evenement</button>
+        <button class="button" onclick="checkAnswer(30, 'B', this)">B) Het bewaken van de mensen en het terrein</button>
+        <button class="button" onclick="checkAnswer(30, 'C', this)">C) Het verkopen van toegangskaarten</button>
+        <button class="button" onclick="checkAnswer(30, 'D', this)">D) Het verzorgen van de catering</button>
+        <div id="result30" class="result"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button" onclick="navigateToQuestion(28)">Vorige</button>
+        </div>
+    </div>
+</div>
+
+<div class="score" id="score"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#vragenlijst').addEventListener('click', () => {
+                console.log('Vragenlijst tuşuna tıklanmış');
+                showAllQuestions();
+            });
+        });
+
+        function showAllQuestions() {
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                question.style.display = 'block'; // Tüm soruları göster
+            });
+        }
+    </script>
+</body>
+</html>
